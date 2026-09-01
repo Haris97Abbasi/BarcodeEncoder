@@ -10,6 +10,15 @@ add_subdirectory(googletest)
 
 enable_testing()
 
+add_executable(asciix_cli 
+    src/Encoder.cpp
+    src/main.cpp  
+)
+
+target_include_directories(asciix_cli PRIVATE 
+    "C:/Users/dell/source/repos/BarcodeEncoder/include"
+)
+
 add_executable(asciix_tests 
     tests/EncoderTests.cpp
     src/Encoder.cpp
